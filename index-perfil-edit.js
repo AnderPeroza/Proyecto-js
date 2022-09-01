@@ -48,7 +48,43 @@ editProfile.addEventListener("click", async()=>{
         "address" : userAddress.value,
         "birthday" :userBirthday.value
     }
-    const token = localStorage.getItem("token")
+
+    Swal.fire({
+        title: 'Estas seguro?',
+        text: "Se realizaran cambios al perfil",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, editar'
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+            const token = localStorage.getItem("token")
+            const response = await fetch('https://vg-cine-server.herokuapp.com/edit-profile', {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    'Authorization': `Bearer ${token}`
+                },
+                body : JSON.stringify(editUser)
+        
+            })
+            if(response.status === 200){
+                Swal.fire(
+                    'Modificado con exito',
+                    'su perfil fue modificado satisfactoriamente!.',
+                    'success'
+                )
+                setTimeout(() => { 
+                    window.location.href = "index-perfil.html"
+                 }, 1500)
+                /*  */
+            }
+           
+        }
+    })
+
+   /*  const token = localStorage.getItem("token")
     const response = await fetch('https://vg-cine-server.herokuapp.com/edit-profile', {
         method: "PUT",
         headers: {
@@ -61,7 +97,7 @@ editProfile.addEventListener("click", async()=>{
 
     const data = await response.json()
 
-    console.log(data)
+    console.log(data) */
 
 
 })

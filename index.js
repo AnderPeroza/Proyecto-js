@@ -1,3 +1,8 @@
+
+
+
+AOS.init();
+
 const init= async()=>{
 
     const ingresar = document.getElementById("nav-ingresar")
@@ -22,13 +27,20 @@ const init= async()=>{
     for(let i = 0 ; i<data.data.length; i++){
         
         movies.innerHTML+=`
-            <div >
-                <a href="info-movies.html"><img src="https://image.tmdb.org/t/p/w500${data.data[i].poster_path}" alt=""></a>
+            <div data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" >
+                <a href="index-info-movies.html?id=${data.data[i].id}"><img  src="https://image.tmdb.org/t/p/w500${data.data[i].poster_path}" alt=""></a>
             </div>
            
          `
     }
 
+    const banner = document.getElementById("banner")
+    banner.style.backgroundImage = 'url("https://cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/A52OT4DFRNCGRDDGJ2LGL7R4J4.jpg")'
+    banner.style.height = "85vh"
+    banner.style.backgroundPosition = "center"
+    banner.style.backgroundSize = "cover"
     
 
     
