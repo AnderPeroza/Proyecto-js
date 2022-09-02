@@ -1,6 +1,6 @@
 .mainSection{
     width: 100%;
-    height: 90vh;
+   /*  height: 90vh; */
     background-size: cover;
     background-image: url();
     text-align: center;
@@ -38,12 +38,21 @@ a{
     flex-wrap: wrap;
     
 }
+.movie-caratula-container{
+    margin: 1.5rem 2rem;
+    width: 240px;
+    height: 354px;
+    margin-top: -300px;
+}
 .movies div{
     margin: 1.5rem 2rem;
     width: 300px;
     height: 500px;
     
     
+}
+.info-movie{
+    color: black;
 }
 .moviesTitle{
     margin-top: 7rem;

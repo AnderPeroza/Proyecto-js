@@ -2,7 +2,8 @@ const init =async ()=>{
 
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
-
+    const movieCaratula = document.getElementById("movie-caratula-container")
+    const infoMovie = document.getElementById("info-movie")
     console.log(params.id)
 
 
@@ -23,6 +24,9 @@ const init =async ()=>{
     background.style.height = "400px"
     background.style.backgroundSize = "cover"
 
-
+    movieCaratula.innerHTML = `
+    <img src="https://image.tmdb.org/t/p/w500/${data.data.poster_path}" alt="">
+    `
+    infoMovie.innerHTML = data.data.overview
 }
 init()
