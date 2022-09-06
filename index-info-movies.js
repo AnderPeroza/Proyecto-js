@@ -25,7 +25,14 @@ const init =async ()=>{
     background.style.backgroundSize = "cover"
 
     movieCaratula.innerHTML = `
-    <img src="https://image.tmdb.org/t/p/w500/${data.data.poster_path}" alt="">
+        <img src="https://image.tmdb.org/t/p/w500/${data.data.poster_path}" alt="">
+        <div>
+            <h2>Titulo<h2/>
+            <p>
+                ${data.data.original_title}
+            </p>
+        <div/>
+        
     `
     infoMovie.innerHTML = data.data.overview
 }

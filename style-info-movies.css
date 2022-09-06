@@ -3,7 +3,7 @@
    /*  height: 90vh; */
     background-size: cover;
     background-image: url();
-    text-align: center;
+    /* text-align: center; */
     background-position: bottom;
 }
 body{
@@ -53,6 +53,11 @@ a{
 }
 .info-movie{
     color: black;
+    display: block !important;
+    margin-block-start: 1em !important;
+    margin-block-end: 1em !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
 }
 .moviesTitle{
     margin-top: 7rem;
@@ -78,4 +83,15 @@ a{
 }
 footer{
     margin-top: 5rem;
+}
+h2{
+    color: black;
+}
+.info-container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
 }
