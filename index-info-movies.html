@@ -13,6 +13,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <script src="index-info-movies.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link rel="stylesheet" href="style-info-movies.css">
     <title>Document</title>
 </head>
@@ -79,31 +81,38 @@
                 </div>
             </div>
         </nav>
-
+        
         <div id="movie-banner" class="movie-banner">
 
-        </div>
-        <div>
-            <div class="movie-caratula-container" id="movie-caratula-container" style="display: flex;">
-                <img src="" alt="">
-                <p>
-
-                </p>
             </div>
+        <div class="container">
            
-            <div class="info-container col-md-5">
-                <h2>Sipnosis</h2>
-                <p class="info-movie" id="info-movie" >
-
-                </p>
-            </div>
-            <div class="btn-container mt-5 tex-center col-12">
-                <button class="btn btn-primary bg-primary">
-                    Comprar
-                </button>
-            </div>
             
+            <div>
+                <div class="movie-caratula-container" id="movie-caratula-container" >
+                    <img src="" alt="">
+                    <p>
+    
+                    </p>
+                </div>
+               
+                <div class="info-container">
+                    <h2>Sipnosis</h2>
+                    <p class="info-movie" id="info-movie" >
+    
+                    </p>
+                </div>
+                <div class="btn-container tex-center " style="margin-top: 4rem;">
+                    <button id="btn-comprar" class="btn-comprar btn-primary bg-primary">
+                        Comprar
+                    </button>
+                </div>
+                
+            </div>
         </div>
+       
+
+    
 
         
 
