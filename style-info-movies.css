@@ -90,8 +90,26 @@ h2{
 .info-container{
     width: 100%;
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 30px;
     margin-right: auto;
     margin-left: auto;
     
+}
+.title-container{
+    margin-top: 4rem;
+    margin-left: 50px;
+
+}
+.title-container p{
+    font-size: 40px;
+}
+.btn{
+    border: none;
+    color: white;
+    font-size: 30px;
+    width: 70vh !important;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
 }

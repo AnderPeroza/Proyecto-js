@@ -26,10 +26,9 @@ const init =async ()=>{
 
     movieCaratula.innerHTML = `
         <img src="https://image.tmdb.org/t/p/w500/${data.data.poster_path}" alt="">
-        <div>
-            <h2>Titulo<h2/>
-            <p>
-                ${data.data.original_title}
+        <div class="title-container col-md-12">
+            <p class="movie-title">
+                ${data.data.title}
             </p>
         <div/>
         
