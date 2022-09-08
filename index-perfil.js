@@ -48,4 +48,9 @@ const editPassword = document.getElementById("edit-password")
 editPassword.addEventListener("click",()=>{
     window.location.href = "index-edit-password.html"
 })
+const historial = document.getElementById("historial")
+
+historial.addEventListener("click", ()=>{
+    location.href = "index-historial-compras.html"
+})
 init()

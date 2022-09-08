@@ -58,7 +58,7 @@ btnComprar.addEventListener("click", async ()=>{
 
     const data = await response.json()
     const { value: formValues } = await Swal.fire({
-        title: 'Multiple inputs',
+        title: 'Compra',
         html:`
             <label for="">Cantidad Entradas</label>
             <input id="ticket-cant" class="swal2-input"></input>
@@ -94,7 +94,7 @@ btnComprar.addEventListener("click", async ()=>{
       
     if (formValues) {
         const token =  localStorage.getItem('token')
-        const params = Object.fromEntries(urlSearchParams.entries());
+        
         const response = await fetch(`https://vg-cine-server.herokuapp.com/ticket`, {
             method: "POST",
             headers: {
