@@ -112,7 +112,7 @@ h2{
     border: none;
     color: white;
     font-size: 30px;
-    width: 50vh !important;
+    max-width: 50vh !important;
 }
 .btn-container{
     display: flex;
