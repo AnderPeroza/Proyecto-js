@@ -1,3 +1,5 @@
+
+
 const nameUser = document.getElementById("nameRegister")
 const lastNameUser = document.getElementById("lastnameRegister")
 const idUser = document.getElementById("idRegister")
@@ -82,4 +84,10 @@ buttonRegister.addEventListener("click", async ()=>{
     
 
 })
+const init = ()=>{
+    if(localStorage.getItem("token")){
+        window.location.href = "/"
+    }
+}
+init()
 

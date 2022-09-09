@@ -4,6 +4,10 @@ const passwordLogin = document.getElementById("passwordLogin")
 const buttonLogin = document.getElementById("buttonLogin")
 
 buttonLogin.addEventListener("click", async () =>{
+    const emailLogin = document.getElementById("emailLogin")  
+    const passwordLogin = document.getElementById("passwordLogin")
+
+    const buttonLogin = document.getElementById("buttonLogin")
     if(emailLogin.value !== "" && passwordLogin.value !== ""){
         const userLogin = {
             "email": emailLogin.value,
@@ -29,6 +33,7 @@ buttonLogin.addEventListener("click", async () =>{
         }
 
     }else{
+        console.log("hola")
         Swal.fire(
             'Campos Vacios',
             'Debe llenar todos los campos requeridos!',

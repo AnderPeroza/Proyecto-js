@@ -29,7 +29,9 @@ const init = async ()=>{
         <div class="col-md-12"><h4 class="h4s">Cumpleaños: ${data.data.birthday}</h4>
         <div class="col-md-12"><h4 class="h4s">Correo: ${data.data.email}</h4>
     `
-
+    if(!localStorage.getItem("token")){
+        window.location.href = "index-login.html"
+    }
 
 }
 
@@ -40,8 +42,25 @@ editPerfil.addEventListener("click",()=>{
 const cerrarSesion = document.getElementById("sign-out")
 
 cerrarSesion.addEventListener("click",()=>{
-    localStorage.removeItem("token")
-    window.location.href = "index.html"
+    
+    Swal.fire({
+        title: 'Estas seguro?',
+        text: "Se Cerrara la sesion",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Cerrar'
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+           
+            localStorage.removeItem("token")
+
+
+            window.location.href = "index.html"
+        }
+    })
+    
 })
 const editPassword = document.getElementById("edit-password")
 
